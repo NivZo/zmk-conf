@@ -43,10 +43,19 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        AltFn {
+            bindings = <&mo 2>;
+            key-positions = <54 55>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        Default {
+        DEFAULT {
             bindings = <
 &kp ESC         &kp N1        &kp N2        &kp N3  &kp N4     &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8      &kp N9            &kp N0             &kp EQUAL
 &kp TAB         &kp Q         &kp W         &kp E   &kp R      &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I       &kp O             &kp P              &kp MINUS
@@ -61,14 +70,26 @@
 
         FN {
             bindings = <
-&kp TILDE  &kp F1           &kp F2           &kp F3  &kp F4  &kp F5    &msc SCRL_UP     &kp F6    &kp F7        &kp F8     &kp F9   &kp F10  &rgb_ug RGB_BRI
-&trans     &trans           &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &kp HOME  &kp UP_ARROW  &kp END    &kp F11  &kp F12  &rgb_ug RGB_BRD
-&trans     &trans           &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &rgb_ug RGB_HUI
-&trans     &trans           &rgb_ug RGB_EFF  &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &trans     &trans   &trans   &rgb_ug RGB_HUD
-&trans     &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
+&kp TILDE     &kp F1           &kp F2           &kp F3  &kp F4  &kp F5    &msc SCRL_UP     &kp F6    &kp F7        &kp F8     &kp F9   &kp F10  &rgb_ug RGB_BRI
+&trans        &trans           &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &kp HOME  &kp UP_ARROW  &kp END    &kp F11  &kp F12  &rgb_ug RGB_BRD
+&kp CAPSLOCK  &trans           &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &rgb_ug RGB_HUI
+&trans        &trans           &rgb_ug RGB_EFF  &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &trans     &trans   &trans   &rgb_ug RGB_HUD
+&trans        &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
             >;
 
-            label = "Fn";
+            label = "FN";
+        };
+
+        NUMPAD {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp N7               &kp N8     &kp N9         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PLUS   &kp N4               &kp N5     &kp N6         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MINUS  &kp N1               &kp N2     &kp N3         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RET    &kp LS(KP_ASTERISK)  &kp N0     &kp KP_DIVIDE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans               &kp CLEAR  &trans         &trans
+            >;
+
+            label = "NUMPAD";
         };
     };
 };
