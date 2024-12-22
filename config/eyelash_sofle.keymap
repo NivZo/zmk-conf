@@ -88,6 +88,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RET    &kp LS(KP_ASTERISK)  &kp N0     &kp KP_DIVIDE  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans               &kp CLEAR  &trans         &trans
             >;
+
+            label = "NUMPAD";
         };
     };
 };
