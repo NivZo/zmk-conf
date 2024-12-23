@@ -44,6 +44,12 @@
         tap-ms = <30>;
     };
 
+    ROTATE_HUE: ROTATE_HUE {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -78,7 +84,7 @@
 &trans        &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
             >;
 
-            label = "FN";
+            display-name = "FN";
         };
 
         NUMPAD {
@@ -90,7 +96,8 @@
 &trans          &kp K_CALCULATOR  &trans  &trans  &trans  &trans    &trans  &trans     &trans               &kp CLEAR  &trans         &trans
             >;
 
-            label = "NUMPAD";
+            display-name = "NUMPAD";
+            sensor-bindings = <&ROTATE_HUE>;
         };
     };
 };
