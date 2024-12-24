@@ -26,7 +26,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - $$mdi:apple-keyboard-shift$$
+  - FN
   - A
   - S
   - D
@@ -39,7 +39,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - .
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -55,7 +55,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - FN
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -91,7 +91,7 @@ layers:
   - F11
   - F12
   - RGB BRD
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:apple-keyboard-caps$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
@@ -120,7 +120,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
