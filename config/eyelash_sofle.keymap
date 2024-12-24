@@ -82,7 +82,7 @@
 &trans        &trans  &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &trans    &kp UP_ARROW  &trans     &kp F11  &kp F12  &trans
 &trans        &trans  &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &kp GRAVE
 &kp CAPSLOCK  &trans  &trans           &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &kt HOME   &kp END  &trans   &trans
-&to 3         &trans  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
+&tog 3        &trans  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
             >;
 
             display-name = "FN";
@@ -107,7 +107,7 @@
 &bt BT_CLR_ALL  &trans           &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans  &rgb_ug RGB_BRD
 &kp CAPSLOCK    &trans           &kp PRINTSCREEN  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans  &rgb_ug RGB_HUI
 &trans          &trans           &rgb_ug RGB_EFF  &trans  &trans  &trans    &trans  &trans  &trans  &kt HOME  &kp END  &trans  &rgb_ug RGB_HUD
-&to 0           &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans
+&tog 0          &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans
             >;
 
             label = "SETTINGS";
