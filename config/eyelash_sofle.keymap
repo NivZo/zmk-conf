@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -55,7 +56,7 @@
 
         AltFn {
             bindings = <&mo 2>;
-            key-positions = <54 55>;
+            key-positions = <54 26>;
         };
     };
 
@@ -77,11 +78,11 @@
 
         FN {
             bindings = <
-&kp TILDE     &kp F1           &kp F2           &kp F3  &kp F4  &kp F5    &msc SCRL_UP     &kp F6    &kp F7        &kp F8     &kp F9   &kp F10  &rgb_ug RGB_BRI
-&trans        &trans           &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &kp HOME  &kp UP_ARROW  &kp END    &kp F11  &kp F12  &rgb_ug RGB_BRD
-&kp CAPSLOCK  &trans           &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &rgb_ug RGB_HUI
-&trans        &trans           &rgb_ug RGB_EFF  &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &trans     &trans   &trans   &rgb_ug RGB_HUD
-&trans        &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
+&kp TILDE     &kp F1  &kp F2           &kp F3  &kp F4  &kp F5    &msc SCRL_UP     &kp F6    &kp F7        &kp F8     &kp F9   &kp F10  &trans
+&trans        &trans  &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &trans    &kp UP_ARROW  &trans     &kp F11  &kp F12  &trans
+&trans        &trans  &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &kp GRAVE
+&kp CAPSLOCK  &trans  &trans           &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &kt HOME   &kp END  &trans   &trans
+&to 3         &trans  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
             >;
 
             display-name = "FN";
@@ -89,14 +90,27 @@
 
         NUMPAD {
             bindings = <
-&trans          &trans            &trans  &trans  &trans  &trans    &trans  &trans     &kp N7               &kp N8     &kp N9         &trans  &trans
-&trans          &trans            &trans  &trans  &trans  &trans    &trans  &kp PLUS   &kp N4               &kp N5     &kp N6         &trans  &trans
-&trans          &trans            &trans  &trans  &trans  &trans    &trans  &kp MINUS  &kp N1               &kp N2     &kp N3         &trans  &trans
-&bt BT_CLR_ALL  &trans            &trans  &trans  &trans  &trans    &trans  &kp RET    &kp LS(KP_ASTERISK)  &kp N0     &kp KP_DIVIDE  &trans  &trans
-&trans          &kp K_CALCULATOR  &trans  &trans  &trans  &trans    &trans  &trans     &trans               &kp CLEAR  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp N7               &kp N8     &kp N9         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PLUS   &kp N4               &kp N5     &kp N6         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MINUS  &kp N1               &kp N2     &kp N3         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp RET    &kp LS(KP_ASTERISK)  &kp N0     &kp KP_DIVIDE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans               &kp CLEAR  &trans         &trans
             >;
 
             display-name = "NUMPAD";
+        };
+
+        SETTINGS {
+            display-name = "FN";
+            bindings = <
+&trans          &bt BT_SEL 0     &bt BT_SEL 1     &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans  &rgb_ug RGB_BRI
+&bt BT_CLR_ALL  &trans           &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans  &rgb_ug RGB_BRD
+&kp CAPSLOCK    &trans           &kp PRINTSCREEN  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans  &rgb_ug RGB_HUI
+&trans          &trans           &rgb_ug RGB_EFF  &trans  &trans  &trans    &trans  &trans  &trans  &kt HOME  &kp END  &trans  &rgb_ug RGB_HUD
+&to 0           &rgb_ug RGB_TOG  &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans   &trans
+            >;
+
+            label = "SETTINGS";
             sensor-bindings = <&ROTATE_HUE>;
         };
     };
