@@ -26,7 +26,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - {t: FN, s: SETTINGS}
+  - FN
   - A
   - S
   - D
@@ -221,7 +221,7 @@ layers:
   - RGB TOG
   - RGB EFF
   - RGB BRD
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PRINTSCREEN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -248,9 +248,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB HUD
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB TOG
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: RGB TOG, type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -262,3 +262,5 @@ layers:
 combos:
 - p: [54, 26]
   k: NUMPAD
+- p: [53, 54, 55]
+  k: SETTINGS
