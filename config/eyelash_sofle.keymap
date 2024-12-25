@@ -37,14 +37,6 @@
         };
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <30>;
-    };
-
     ROTATE_HUE: ROTATE_HUE {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -53,7 +45,6 @@
 
     FN_TAP: FN_TAP {
         compatible = "zmk,behavior-tap-dance";
-        label = "FN_TAP";
         #binding-cells = <0>;
         bindings = <&mo 1>, <&mo 2>, <&mo 3>;
     };
@@ -82,7 +73,7 @@
 &trans        &trans  &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &trans    &kp UP_ARROW  &trans     &kp F11  &kp F12  &trans
 &trans        &trans  &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &kp GRAVE
 &kp CAPSLOCK  &trans  &trans           &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &kt HOME   &kp END  &trans   &trans
-&none         &trans  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
+&trans        &trans  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
             >;
 
             display-name = "FN";
@@ -101,16 +92,15 @@
         };
 
         SETTINGS {
-            display-name = "SETTINGS";
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1     &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_BRI
-&none           &none         &none            &none  &none  &none    &none  &none  &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD
-&none           &none         &kp PRINTSCREEN  &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUI
-&none           &none         &none            &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUD
-&none           &none         &none            &none  &none  &none    &none  &none  &none  &none  &none            &none
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_BRI
+&none           &none         &none         &none  &none  &none    &none  &none  &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD
+&none           &none         &none         &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUI
+&none           &none         &none         &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUD
+&none           &none         &none         &none  &none  &none    &none  &none  &none  &none  &none            &none
             >;
 
-            label = "SETTINGS";
+            display-name = "SETTINGS";
             sensor-bindings = <&ROTATE_HUE>;
         };
     };
