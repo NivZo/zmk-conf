@@ -43,6 +43,13 @@
         bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
     };
 
+    FNTAP: FNTAP {
+        compatible = "zmk,behavior-tap-dance";
+        label = "FNTAP";
+        #binding-cells = <0>;
+        bindings = <&mo 1>, <&mo 2>, <&mo 3>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
