@@ -106,13 +106,13 @@
         };
 
         SETTINGS {
-            display-name = "FN";
+            display-name = "SETTINGS";
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1     &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_BRI
-&none           &none            &none            &none  &none  &none    &none  &none  &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD
-&none           &none            &kp PRINTSCREEN  &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUI
-&none           &none            &rgb_ug RGB_EFF  &none  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUD
-&none           &rgb_ug RGB_TOG  &none            &none  &none  &none    &none  &none  &none  &none  &none            &none
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1     &none            &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_BRI
+&none           &none         &none            &none            &none  &none    &none  &none  &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD
+&none           &none         &kp PRINTSCREEN  &none            &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUI
+&none           &none         &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &none  &none    &none  &none  &none  &none  &none            &none            &rgb_ug RGB_HUD
+&none           &none         &none            &none            &none  &none    &none  &none  &none  &none  &none            &none
             >;
 
             label = "SETTINGS";
