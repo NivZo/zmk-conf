@@ -49,18 +49,6 @@
         bindings = <&mo 1>, <&mo 3>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-        AltFn {
-            bindings = <&mo 2>;
-            key-positions = <54 26>;
-        };
-        SETTINGS {
-            bindings = <&mo 3>;
-            key-positions = <53 54 55>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
