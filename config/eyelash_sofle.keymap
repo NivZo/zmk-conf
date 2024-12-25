@@ -46,7 +46,9 @@
     FNTAP: FNTAP {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        bindings = <&mo 1>, <&mo 3>;
+        bindings = <&mo 1>, <&mo 2>, <&mo 3>;
+
+        tapping-term-ms = <120>;
     };
 
     keymap {
@@ -55,11 +57,11 @@
         DEFAULT {
             display-name = "DEFAULT";
             bindings = <
-&kp ESC     &kp N1        &kp N2        &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8      &kp N9            &kp N0             &kp EQUAL
-&kp TAB     &kp Q         &kp W         &kp E      &kp R      &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I       &kp O             &kp P              &kp MINUS
-&FNTAP      &kp A         &kp S         &kp D      &kp F      &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K       &kp L             &kp SEMI           &kp APOS
-&kp LSHFT   &kp Z         &kp X         &kp C      &kp V      &kp B        &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA   &kp DOT           &kp FSLH           &kp BACKSLASH
-&kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &kp ENTER    &kp ENTER        &kp BACKSPACE  &kp SPACE  &kp DELETE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp ESC     &kp N1        &kp N2        &kp N3            &kp N4     &kp N5                  &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9            &kp N0             &kp EQUAL
+&kp TAB     &kp Q         &kp W         &kp E             &kp R      &kp T                   &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O             &kp P              &kp MINUS
+&FNTAP      &kp A         &kp S         &kp D             &kp F      &kp G                   &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
+&kp LSHFT   &kp Z         &kp X         &kp C             &kp V      &kp B                   &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSLASH
+&kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp SPACE  &mt LEFT_SHIFT SPACE    &kp ENTER        &kp BACKSPACE  &kp ENTER  &kp RSHFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -72,9 +74,8 @@
 &trans        &trans  &trans           &trans  &trans  &trans    &msc SCRL_DOWN   &trans    &kp UP_ARROW  &trans     &kp F11  &kp F12  &trans
 &trans        &trans  &kp PRINTSCREEN  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans   &kp GRAVE
 &kp CAPSLOCK  &trans  &trans           &trans  &trans  &trans    &msc SCRL_RIGHT  &trans    &trans        &kt HOME   &kp END  &trans   &trans
-&none         &trans  &trans           &trans  &trans  &trans    &trans           &trans    &trans        &trans     &trans   &trans
+&none         &trans  &trans           &trans  &trans  &trans    &trans           &kp DEL   &trans        &trans     &trans   &trans
             >;
-
         };
 
         NUMPAD {
@@ -86,7 +87,6 @@
 &none  &none  &none  &none  &none  &none    &none  &kp RET    &kp LS(KP_ASTERISK)  &kp N0     &kp KP_DIVIDE  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none      &none                &kp CLEAR  &none          &none
             >;
-
         };
 
         SETTINGS {
