@@ -58,13 +58,6 @@
         bindings = <&mo 1>, <&mo 2>, <&mo 3>;
     };
 
-    SHFT_CAPS: SHFT_CAPS {
-        compatible = "zmk,behavior-tap-dance";
-        label = "SHFT_CAPS";
-        #binding-cells = <0>;
-        bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
-    };
-
     combos { compatible = "zmk,combos"; };
 
     keymap {
