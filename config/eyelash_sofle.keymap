@@ -50,19 +50,7 @@
         bindings = <&mo 1>, <&mo 2>, <&mo 3>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        AltFn {
-            bindings = <&mo 2>;
-            key-positions = <54 26>;
-        };
-
-        SETTINGS {
-            bindings = <&mo 3>;
-            key-positions = <53 54 55>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -71,7 +59,7 @@
             bindings = <
 &kp ESC     &kp N1        &kp N2        &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8      &kp N9            &kp N0             &kp EQUAL
 &kp TAB     &kp Q         &kp W         &kp E      &kp R      &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I       &kp O             &kp P              &kp MINUS
-&mo 1       &kp A         &kp S         &kp D      &kp F      &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K       &kp L             &kp SEMI           &kp APOS
+&FNTAP      &kp A         &kp S         &kp D      &kp F      &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K       &kp L             &kp SEMI           &kp APOS
 &kp LSHFT   &kp Z         &kp X         &kp C      &kp V      &kp B        &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA   &kp DOT           &kp FSLH           &kp BACKSLASH
 &kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &kp ENTER    &kp ENTER        &kp BACKSPACE  &kp SPACE  &kp DELETE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
