@@ -111,7 +111,7 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
 
     // Draw circles
     int circle_offsets[5][2] = {
-        {1, 13}, {43, 13}, {22, 34}, {1, 55}, {43, 55},
+        {13, -13}, {55, -13}, {34, 8}, {13, 29}, {55, 29},
         // {13, 13}, {55, 13}, {34, 34}, {13, 55}, {55, 55},
     };
 
