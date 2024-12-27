@@ -127,8 +127,8 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+Ctl+ HOME
-  - Sft+Ctl+ END
+  - Sft+ HOME
+  - Sft+ END
   NUMPAD:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
