@@ -40,18 +40,18 @@ layers:
   - {t: ;, s: ':'}
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-shift$$
-  - .
   - Z
   - X
   - C
   - V
-  - $$mdi:arrow-right-bold$$
   - B
+  - $$mdi:arrow-right-bold$$
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
+  - {t: \, s: '|'}
   - $$mdi:volume-off$$
   - LWIN
   - $$mdi:apple-keyboard-option$$
