@@ -59,7 +59,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - W_NAV_SYM
   - $$mdi:keyboard-space$$
-  - SETTINGS
+  - '&SETTINGS_WIN_MAC'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: W_NAV_SYM}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -189,7 +189,7 @@ layers:
   - LGUI
   - M_NAV_SYM
   - $$mdi:keyboard-space$$
-  - SETTINGS
+  - '&SETTINGS_WIN_MAC'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: M_NAV_SYM}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -384,7 +384,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
