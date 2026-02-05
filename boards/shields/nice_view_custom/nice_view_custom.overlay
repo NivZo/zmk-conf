@@ -18,5 +18,6 @@
 / {
     chosen {
         zephyr,display = &nice_view;
+        zmk,studio-rpc-uart = &uart0;
     };
 };
