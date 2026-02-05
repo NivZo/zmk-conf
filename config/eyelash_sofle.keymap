@@ -42,18 +42,19 @@
         bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
     };
 
-    FNTAP: FNTAP {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        bindings = <&mo 4>, <&mo 5>, <&mo 5>;
-
-        tapping-term-ms = <200>;
-    };
-
     SHIFT_LOCK: SHIFT_LOCK {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         bindings = <&kp RSHIFT>, <&kp CAPSLOCK>;
+    };
+
+    SETTINGS_WIN_MAC: SETTINGS_WIN_MAC {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        bindings = <&mo 5>, <&to 0>, <&to 2>;
+
+        label = "SETTINGS_WIN_MAC";
+        tapping-term-ms = <400>;
     };
 
     keymap {
@@ -61,11 +62,11 @@
 
         WIN_DEFAULT {
             bindings = <
-&kp ESC       &kp N1    &kp N2    &kp N3            &kp N4  &kp N5       &kp UP     &kp N6    &kp N7       &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB       &kp Q     &kp W     &kp E             &kp R   &kp T        &kp DOWN   &kp Y     &kp U        &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_WIN  &kp A     &kp S     &kp D             &kp F   &kp G        &kp LEFT   &kp H     &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z     &kp X     &kp C             &kp V   &kp B        &kp RIGHT  &kp N     &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&kp C_MUTE    &kp LBKT  &kp LALT  &kp LEFT_CONTROL  &mo 1   &kp SPACE    &mo 5      &kp BSPC  &lt 1 ENTER  &kp RET    &mo 4    &kp RBKT
+&kp ESC       &kp N1    &kp N2    &kp N3            &kp N4  &kp N5       &kp UP             &kp N6    &kp N7       &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB       &kp Q     &kp W     &kp E             &kp R   &kp T        &kp DOWN           &kp Y     &kp U        &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_WIN  &kp A     &kp S     &kp D             &kp F   &kp G        &kp LEFT           &kp H     &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT     &kp Z     &kp X     &kp C             &kp V   &kp B        &kp RIGHT          &kp N     &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp C_MUTE    &kp LBKT  &kp LALT  &kp LEFT_CONTROL  &mo 1   &kp SPACE    &SETTINGS_WIN_MAC  &kp BSPC  &lt 1 ENTER  &kp RET    &mo 4    &kp RBKT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -85,11 +86,11 @@
 
         MAC_DEFAULT {
             bindings = <
-&kp ESC     &kp N1    &kp N2    &kp N3    &kp N4  &kp N5       &kp UP     &kp N6    &kp N7       &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB     &kp Q     &kp W     &kp E     &kp R   &kp T        &kp DOWN   &kp Y     &kp U        &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL   &kp A     &kp S     &kp D     &kp F   &kp G        &kp LEFT   &kp H     &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z     &kp X     &kp C     &kp V   &kp B        &kp RIGHT  &kp N     &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&kp C_MUTE  &kp LBKT  &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &mo 5      &kp BSPC  &lt 3 ENTER  &kp RET    &mo 4    &kp RBKT
+&kp ESC     &kp N1    &kp N2    &kp N3    &kp N4  &kp N5       &kp UP             &kp N6    &kp N7       &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB     &kp Q     &kp W     &kp E     &kp R   &kp T        &kp DOWN           &kp Y     &kp U        &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL   &kp A     &kp S     &kp D     &kp F   &kp G        &kp LEFT           &kp H     &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z     &kp X     &kp C     &kp V   &kp B        &kp RIGHT          &kp N     &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp C_MUTE  &kp LBKT  &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &SETTINGS_WIN_MAC  &kp BSPC  &lt 3 ENTER  &kp RET    &mo 4    &kp RBKT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
