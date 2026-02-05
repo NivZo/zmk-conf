@@ -15,6 +15,10 @@
     };
 };
 
+&uart0 {
+    status = "okay";
+};
+
 / {
     chosen {
         zephyr,display = &nice_view;
